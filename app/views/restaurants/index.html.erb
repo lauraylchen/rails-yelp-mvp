@@ -1,0 +1,10 @@
+<h1>All our Restaurants</h1>
+
+<ul>
+  <% @restaurants.each do |resto| %>
+    <li class="d-flex p-2">
+      <h2 class="pe-2 my-auto"><%= resto.name %></h2>
+      <%= link_to "See details", restaurant_path(resto), class: "btn btn-primary m-2"%>
+    </li>
+  <% end %>
+</ul>
